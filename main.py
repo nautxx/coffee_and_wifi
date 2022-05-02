@@ -6,21 +6,13 @@ from wtforms.validators import DataRequired, URL
 import csv
 from dotenv import load_dotenv
 import os
+from forms import CafeForm, BrewForm
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY")
 Bootstrap(app)
 
-
-class CafeForm(FlaskForm):
-    cafe = StringField("Cafe name", validators=[DataRequired()])
-    location = StringField("Cafe Location on Google Maps (URL)", validators=[DataRequired(), URL()])
-    open = StringField("Opening Time e.g. 8AM", validators=[DataRequired()])
-    close = StringField("Closing Time e.g. 5:30PM", validators=[DataRequired()])
-    coffee_rating = SelectField("Coffee Rating", choices=["☕️", "☕☕", "☕☕☕", "☕☕☕☕", "☕☕☕☕☕"], validators=[DataRequired()])
-    wifi_rating = SelectField("Wifi Rating", choices=["✘", "💪", "💪💪", "💪💪💪", "💪💪💪💪", "💪💪💪💪💪"], validators=[DataRequired()])
-    power_rating = SelectField("Power Rating", choices=["✘", "🔌", "🔌🔌", "🔌🔌🔌", "🔌🔌🔌🔌", "🔌🔌🔌🔌🔌"], validators=[DataRequired()])
-    submit = SubmitField('Submit')
 
 # all Flask routes below
 @app.route("/")
