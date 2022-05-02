@@ -21,7 +21,7 @@ class BrewForm():
     region = StringField("Region", validators=[DataRequired()])
     roast_level = SelectField("Coffee Rating", choices=["Light", "Medium", "Dark", "Darker than Dark"], validators=[DataRequired()])
     roast_date = StringField("Region", validators=[DataRequired()])
-    brew_method = SelectField("Brew Method", choices=["Syphon", "Pour Over", "Cold"], validators=[DataRequired()])
+    brew_method = SelectField("Brew Method", choices=["Syphon", "Chemex", "Pour Over", "Cold", "Aeropress", "French Press", "Espresso", "Drip Brew"], validators=[DataRequired()])
     grind_settings = StringField("Grind Settings", validators=[DataRequired()])
     water_temp = StringField("Water Temp", validators=[DataRequired()])
     dose = StringField("Dose", validators=[DataRequired()])
