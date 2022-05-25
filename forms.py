@@ -1,4 +1,4 @@
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm # pip install -U Flask-WTF
 from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired, URL
 
