@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
+from flask_bootstrap import Bootstrap   # pip install Flask-Bootstrap
+from flask_wtf import FlaskForm # pip install -U Flask-WTF
 from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired, URL
 import csv
