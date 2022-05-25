@@ -3,7 +3,6 @@ from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired, URL
 
 
-
 class CafeForm():
 
     cafe = StringField("Cafe name", validators=[DataRequired()])
@@ -14,6 +13,7 @@ class CafeForm():
     wifi_rating = SelectField("Wifi Rating", choices=["✘", "💪", "💪💪", "💪💪💪", "💪💪💪💪", "💪💪💪💪💪"], validators=[DataRequired()])
     power_rating = SelectField("Power Rating", choices=["✘", "🔌", "🔌🔌", "🔌🔌🔌", "🔌🔌🔌🔌", "🔌🔌🔌🔌🔌"], validators=[DataRequired()])
     submit = SubmitField('Submit')
+
 
 class BrewForm():
 
