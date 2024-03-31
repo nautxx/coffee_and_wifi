@@ -43,17 +43,19 @@ def log_brew():
     if form.validate_on_submit():
         # writes object data into .csv file
         with open("brew_data.csv", mode="a") as csv_file:
-            csv_file.write(f"\n{form.coffee.data},"
-                           f"{form.region.data},"
-                           f"{form.roast_level.data},"
-                           f"{form.roast_date.data},"
-                           f"{form.brew_method.data},"
-                           f"{form.grind_settings.data},"
-                           f"{form.water_temp.data},"
-                           f"{form.dose.data},"
-                           f"{form.water_in_or_yield.data},"
-                           f"{form.brew_time.data},"
-                           f"{form.notes.data}")
+            csv_file.write(
+                f"\n{form.coffee.data},"
+                f"{form.region.data},"
+                f"{form.roast_level.data},"
+                f"{form.roast_date.data},"
+                f"{form.brew_method.data},"
+                f"{form.grind_settings.data},"
+                f"{form.water_temp.data},"
+                f"{form.dose.data},"
+                f"{form.water_in_or_yield.data},"
+                f"{form.brew_time.data},"
+                f"{form.notes.data}"
+            )
         return redirect(url_for('cafes'))
     return render_template('log.html', form=form)
 
